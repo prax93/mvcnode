@@ -6,8 +6,17 @@ const app = express()
 const port = 3000
 
 app.get('/movies', async (req, res) => {
+
+  try {
     let movies = await getMovies()
-  res.send(movies)
+    if (movies instanceof Error) {
+      throw movies; // Jump to the catch block
+    }
+    res.send(movies)
+  } catch (error) {
+    res.status(401).send(error.message)
+  }
+  
 })
 
 app.listen(port, () => {

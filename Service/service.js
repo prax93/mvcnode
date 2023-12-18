@@ -14,7 +14,7 @@ export default async function getMovies(){
         }
 
    } catch (error) {
-        console.log(error.message)
+        return error
    }
 
 }
