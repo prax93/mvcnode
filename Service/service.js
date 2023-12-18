@@ -1,9 +1,12 @@
-let api_key = process.env.api_key;
 
-export default async function getMovies(){
+export default class MovieService{
+
+api_key = process.env.api_key;
+
+async getMovies(){
 
    try {
-        let moviesList = await fetch('https://api.themoviedb.org/3/trending/all/week?api_key=' + api_key)
+        let moviesList = await fetch('https://api.themoviedb.org/3/trending/all/week?api_key=' + this.api_key)
 
         if(moviesList.ok){
          moviesList = await moviesList.json()
@@ -17,4 +20,5 @@ export default async function getMovies(){
         return error
    }
 
+}
 }
