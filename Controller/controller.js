@@ -1,12 +1,13 @@
 import MovieService from '../Service/service.js';
 import express from 'express';
 
-
 const app = express()
 const port = 3000
-const moviesService = new MovieService();
 
 app.get('/movies', async (req, res) => {
+
+  // Initiate Object from Factory Class MovieService
+  const moviesService = new MovieService();
 
   try {
     let movies = await moviesService.getMovies()
