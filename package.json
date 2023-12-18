@@ -2,7 +2,7 @@
   "name": "mvcnode",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "Controller/controller.js",
   "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
