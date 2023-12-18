@@ -14,7 +14,7 @@ app.get('/movies', async (req, res) => {
     }
     res.send(movies)
   } catch (error) {
-    res.status(401).send(error.message)
+    res.status(401).send(`${res.statusCode} ${error.message}`)
   }
   
 })

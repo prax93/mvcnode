@@ -10,7 +10,7 @@ export default async function getMovies(){
          return  moviesList.results
         }
         else{
-            throw Error('Internal Server Error')
+            throw Error(moviesList.statusText)
         }
 
    } catch (error) {
