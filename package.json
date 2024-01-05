@@ -2,10 +2,11 @@
   "name": "mvcnode",
   "version": "1.0.0",
   "description": "",
-  "main": "Controller/controller.js",
+  "main": "/src/Controller/controller.js",
   "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "node --test native/tests/",
+    "start": "node ./src/Controller/controller.js"
   },
   "repository": {
     "type": "git",
